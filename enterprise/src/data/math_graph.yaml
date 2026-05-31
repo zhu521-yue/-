@@ -1,0 +1,154 @@
+nodes:
+  - id: arithmetic
+    name: 四则运算
+    difficulty: 0.1
+    prerequisites: []
+    tags: [基础]
+
+  - id: fractions
+    name: 分数运算
+    difficulty: 0.2
+    prerequisites: [arithmetic]
+    tags: [基础]
+
+  - id: negative_numbers
+    name: 负数
+    difficulty: 0.15
+    prerequisites: [arithmetic]
+    tags: [基础]
+
+  - id: algebraic_expr
+    name: 代数式
+    difficulty: 0.3
+    prerequisites: [arithmetic, negative_numbers]
+    tags: [代数]
+
+  - id: linear_eq_1
+    name: 一元一次方程
+    difficulty: 0.35
+    prerequisites: [algebraic_expr]
+    tags: [方程]
+    related_to: [linear_eq_2, inequality, linear_func]
+    common_errors:
+      - "移项时忘记变号"
+      - "两边同除时漏掉负号导致不等号方向错误"
+      - "合并同类项计算错误"
+    teaching_analogies:
+      - "方程就像天平，两边必须始终保持平衡"
+      - "解方程就是把x从一堆数字里'解救'出来，让它单独站在一边"
+    key_formulas:
+      - "ax + b = 0 → x = -b/a"
+
+  - id: linear_eq_2
+    name: 二元一次方程组
+    difficulty: 0.45
+    prerequisites: [linear_eq_1]
+    tags: [方程]
+
+  - id: factoring
+    name: 因式分解
+    difficulty: 0.4
+    prerequisites: [algebraic_expr]
+    tags: [代数]
+    related_to: [quadratic_eq, algebraic_expr]
+    common_errors:
+      - "提公因式时漏项"
+      - "十字相乘法符号判断错误"
+      - "完全平方公式记混：(a+b)²和(a-b)²搞反"
+    teaching_analogies:
+      - "因式分解就是乘法的逆运算，把展开的式子'折叠'回去"
+      - "就像把一个大数拆成几个小数相乘：12 = 2×2×3"
+    key_formulas:
+      - "a² - b² = (a+b)(a-b)"
+      - "a² + 2ab + b² = (a+b)²"
+      - "x² + (p+q)x + pq = (x+p)(x+q)"
+
+  - id: quadratic_eq
+    name: 一元二次方程
+    difficulty: 0.55
+    prerequisites: [factoring, linear_eq_1]
+    tags: [方程]
+    related_to: [discriminant, vieta_theorem, quadratic_func]
+    common_errors:
+      - "忘记考虑判别式Δ=0的情况"
+      - "配方法中符号错误"
+      - "求根公式中2a写成2"
+    teaching_analogies:
+      - "抛物线与x轴的交点就是方程的解"
+      - "判别式就像红绿灯：正数通行（两个解），零刚好（一个解），负数停止（无实数解）"
+    key_formulas:
+      - "ax² + bx + c = 0"
+      - "x = (-b ± √(b²-4ac)) / 2a"
+      - "Δ = b² - 4ac"
+
+  - id: quadratic_func
+    name: 二次函数
+    difficulty: 0.6
+    prerequisites: [quadratic_eq]
+    tags: [函数]
+
+  - id: inequality
+    name: 不等式
+    difficulty: 0.4
+    prerequisites: [linear_eq_1]
+    tags: [不等式]
+
+  - id: coordinate
+    name: 平面直角坐标系
+    difficulty: 0.3
+    prerequisites: [negative_numbers]
+    tags: [几何]
+
+  - id: linear_func
+    name: 一次函数
+    difficulty: 0.45
+    prerequisites: [linear_eq_1, coordinate]
+    tags: [函数]
+
+  - id: pythagorean
+    name: 勾股定理
+    difficulty: 0.35
+    prerequisites: [arithmetic]
+    tags: [几何]
+
+  - id: similar_triangle
+    name: 相似三角形
+    difficulty: 0.5
+    prerequisites: [pythagorean, fractions]
+    tags: [几何]
+
+  - id: trig_basic
+    name: 三角函数基础
+    difficulty: 0.55
+    prerequisites: [pythagorean, fractions]
+    tags: [三角]
+
+  - id: probability
+    name: 概率初步
+    difficulty: 0.4
+    prerequisites: [fractions]
+    tags: [统计]
+
+  - id: statistics
+    name: 数据统计
+    difficulty: 0.35
+    prerequisites: [arithmetic, fractions]
+    tags: [统计]
+
+  - id: sequence
+    name: 数列
+    difficulty: 0.5
+    prerequisites: [algebraic_expr]
+    tags: [代数]
+
+  - id: sets
+    name: 集合
+    difficulty: 0.25
+    prerequisites: [arithmetic]
+    tags: [基础]
+
+  - id: logic
+    name: 简易逻辑
+    difficulty: 0.3
+    prerequisites: [sets]
+    tags: [基础]

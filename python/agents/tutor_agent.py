@@ -57,7 +57,7 @@ class TutorAgent(BaseAgent):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self._student_attempts: dict[str, dict[str, int]] = {}
+        self._student_attempts: dict[str, int] = {}
 
     @property
     def subscribed_events(self) -> list[EventType]:

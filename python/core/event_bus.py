@@ -58,7 +58,7 @@ class EventType(str, Enum):
 class Event(BaseModel):
     """事件数据模型。"""
 
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))  # 事件唯一ID
     type: EventType
     source: str  # 发布事件的Agent名称
     timestamp: datetime = Field(default_factory=datetime.now)
@@ -66,7 +66,7 @@ class Event(BaseModel):
     data: dict[str, Any] = Field(default_factory=dict)
     correlation_id: str | None = None  # 用于追踪事件链
 
-
+# 异步处理函数类型提示，返回值为None,传入参数为Event
 EventHandler = Callable[[Event], Coroutine[Any, Any, None]]
 
 

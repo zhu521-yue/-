@@ -1,199 +1,304 @@
-import React, { useState } from 'react'
-import { useWebSocket, AgentEvent } from './hooks/useWebSocket'
+import React, { useState, useRef, useEffect } from 'react'
 
-const AGENT_COLORS: Record<string, string> = {
-  AssessmentAgent: '#3b82f6',
-  TutorAgent: '#10b981',
-  CurriculumAgent: '#f59e0b',
-  HintAgent: '#8b5cf6',
-  EngagementAgent: '#ef4444',
-  api: '#6b7280',
+const API_BASE = '/api/v1'
+
+interface QuestionData {
+  id: string
+  knowledge_id: string
+  type: 'choice' | 'fill' | 'open'
+  difficulty: number
+  stem: string
+  options?: Record<string, string>
 }
 
-function EventCard({ event }: { event: AgentEvent }) {
-  const color = AGENT_COLORS[event.source] || '#6b7280'
-  return (
-    <div style={{
-      border: `2px solid ${color}`,
-      borderRadius: 8,
-      padding: 12,
-      marginBottom: 8,
-      background: `${color}11`,
-    }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-        <strong style={{ color }}>{event.source}</strong>
-        <span style={{ fontSize: 12, color: '#999' }}>{event.event_type}</span>
-      </div>
-      {event.data.response && (
-        <p style={{ margin: 0 }}>{String(event.data.response)}</p>
-      )}
-      {event.data.message && (
-        <p style={{ margin: 0 }}>{String(event.data.message)}</p>
-      )}
-      {event.data.mastery !== undefined && (
-        <div style={{ marginTop: 4 }}>
-          <span>掌握度: </span>
-          <strong>{(Number(event.data.mastery) * 100).toFixed(1)}%</strong>
-          {event.data.level && <span> ({String(event.data.level)})</span>}
-        </div>
-      )}
-      {event.data.hint_text && (
-        <p style={{ margin: '4px 0 0', fontStyle: 'italic' }}>{String(event.data.hint_text)}</p>
-      )}
-    </div>
-  )
+interface SubmitResult {
+  is_correct: boolean
+  score: number
+  feedback: string
+  mastery: number
+  mastery_level: string
+  level_changed: boolean
+  session_state: string
+  engagement_state: string
+  report: string
+}
+
+const KNOWLEDGE_OPTIONS = [
+  { id: 'arithmetic', name: '🔢 四则运算', emoji: '🧮' },
+  { id: 'linear_eq_1', name: '📐 一元一次方程', emoji: '✏️' },
+  { id: 'factoring', name: '🧩 因式分解', emoji: '🔍' },
+  { id: 'quadratic_eq', name: '📈 一元二次方程', emoji: '🎯' },
+  { id: 'probability', name: '🎲 概率初步', emoji: '🍀' },
+]
+
+const MASTERY_EMOJI: Record<string, string> = {
+  not_started: '🌱',
+  beginner: '🌿',
+  developing: '🌳',
+  proficient: '🌟',
+  mastered: '👑',
+}
+
+const STATE_EMOJI: Record<string, string> = {
+  FOCUSED: '😊',
+  STRUGGLING: '😅',
+  FRUSTRATED: '😣',
+  BORED: '😴',
+  NEED_BREAK: '☕',
+  ONBOARDING: '👋',
+  LEARNING: '📖',
+  PRACTICING: '💪',
+  REVIEWING: '🔄',
+  BREAK: '☕',
 }
 
 export default function App() {
   const [learnerId] = useState('student_001')
-  const { events, connected, send } = useWebSocket(learnerId)
   const [knowledgeId, setKnowledgeId] = useState('quadratic_eq')
   const [message, setMessage] = useState('')
+  const [question, setQuestion] = useState<QuestionData | null>(null)
+  const [answer, setAnswer] = useState('')
+  const [submitResult, setSubmitResult] = useState<SubmitResult | null>(null)
+  const [chatResponse, setChatResponse] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [chatLoading, setChatLoading] = useState(false)
+  const [bgImage, setBgImage] = useState('')
 
-  const handleSubmit = (isCorrect: boolean) => {
-    send({
-      action: 'submit',
-      knowledge_id: knowledgeId,
-      is_correct: isCorrect,
-      time_spent_seconds: Math.floor(Math.random() * 60) + 10,
-    })
+  // 背景图轮播
+  useEffect(() => {
+    let images: string[] = []
+    const fetchAndSet = async () => {
+      if (images.length === 0) {
+        const res = await fetch(`${API_BASE}/backgrounds`)
+        const data = await res.json()
+        images = data.images || []
+      }
+      if (images.length > 0) {
+        const random = images[Math.floor(Math.random() * images.length)]
+        setBgImage(random)
+      }
+    }
+    fetchAndSet()
+    const timer = setInterval(fetchAndSet, 30000)
+    return () => clearInterval(timer)
+  }, [])
+
+  // 时间追踪
+  const sessionStart = useRef(Date.now())
+  const lastActivity = useRef(Date.now())
+
+  const getTimeData = () => ({
+    session_duration: (Date.now() - sessionStart.current) / 1000,
+    idle_seconds: (Date.now() - lastActivity.current) / 1000,
+  })
+  const updateActivity = () => { lastActivity.current = Date.now() }
+
+  // 获取题目
+  const fetchQuestion = async () => {
+    updateActivity()
+    setSubmitResult(null)
+    setAnswer('')
+    const res = await fetch(`${API_BASE}/question?knowledge_id=${knowledgeId}`)
+    const data = await res.json()
+    if (data.error) { alert(data.error); return }
+    setQuestion(data)
   }
 
-  const handleQuestion = () => {
+  // 提交答案
+  const handleSubmit = async () => {
+    if (!question || !answer.trim()) return
+    updateActivity()
+    setLoading(true)
+    try {
+      const res = await fetch(`${API_BASE}/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ learner_id: learnerId, question_id: question.id, answer: answer.trim() }),
+      })
+      const data: SubmitResult = await res.json()
+      setSubmitResult(data)
+    } finally { setLoading(false) }
+  }
+
+  // 发送消息
+  const handleChat = async () => {
     if (!message.trim()) return
-    send({ action: 'question', knowledge_id: knowledgeId, question: message })
-    setMessage('')
+    updateActivity()
+    setChatLoading(true)
+    try {
+      const res = await fetch(`${API_BASE}/chat`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ learner_id: learnerId, message: message.trim(), ...getTimeData() }),
+      })
+      const data = await res.json()
+      setChatResponse(String(data.response?.response || ''))
+      setMessage('')
+    } finally { setChatLoading(false) }
   }
 
   return (
-    <div style={{
-      maxWidth: 900,
-      margin: '0 auto',
-      padding: 24,
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-    }}>
-      <header style={{ marginBottom: 24 }}>
-        <h1 style={{ margin: 0 }}>多Agent智能教育系统</h1>
-        <p style={{ color: '#666' }}>
-          5-Agent Mesh + 事件驱动架构 | 学习者: {learnerId}
-          <span style={{
-            marginLeft: 12,
-            padding: '2px 8px',
-            borderRadius: 4,
-            background: connected ? '#10b981' : '#ef4444',
-            color: '#fff',
-            fontSize: 12,
-          }}>
-            {connected ? '已连接' : '未连接'}
-          </span>
-        </p>
+    <>
+      {bgImage && <div className="bg-layer" style={{ backgroundImage: `url(${bgImage})` }} />}
+      <div className="bg-overlay" />
+      <div className="app">
+      <style>{`
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { min-height: 100vh; }
+        .app { max-width: 960px; margin: 0 auto; padding: 24px; font-family: 'Segoe UI', system-ui, sans-serif; position: relative; z-index: 1; }
+        .bg-layer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; transition: opacity 1.5s ease; z-index: 0; }
+        .bg-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.75); backdrop-filter: blur(2px); z-index: 0; }
+        .header { text-align: center; margin-bottom: 32px; }
+        .header h1 { font-size: 28px; background: linear-gradient(135deg, #7c3aed, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header p { color: #6b7280; margin-top: 4px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .card { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+        .card h2 { font-size: 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .knowledge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+        .knowledge-btn { padding: 10px; border-radius: 10px; border: 2px solid #e5e7eb; background: white; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+        .knowledge-btn:hover { border-color: #a78bfa; transform: translateY(-1px); }
+        .knowledge-btn.active { border-color: #7c3aed; background: #f5f3ff; }
+        .btn { padding: 12px 20px; border-radius: 12px; border: none; cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.2s; width: 100%; }
+        .btn:hover { transform: translateY(-1px); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .btn-primary { background: linear-gradient(135deg, #7c3aed, #6366f1); color: white; }
+        .btn-success { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+        .btn-chat { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
+        .question-card { background: #fefce8; border: 2px solid #fde68a; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .question-type { font-size: 11px; color: #92400e; background: #fef3c7; padding: 2px 8px; border-radius: 20px; display: inline-block; margin-bottom: 8px; }
+        .question-stem { font-size: 15px; font-weight: 600; line-height: 1.5; margin-bottom: 12px; }
+        .option-label { display: block; padding: 10px 12px; margin-bottom: 6px; border-radius: 8px; border: 2px solid #e5e7eb; cursor: pointer; transition: all 0.15s; font-size: 14px; }
+        .option-label:hover { border-color: #a78bfa; background: #f5f3ff; }
+        .option-label.selected { border-color: #7c3aed; background: #ede9fe; }
+        input[type="text"], textarea { width: 100%; padding: 10px 12px; border-radius: 8px; border: 2px solid #e5e7eb; font-size: 14px; transition: border-color 0.2s; resize: vertical; }
+        input[type="text"]:focus, textarea:focus { outline: none; border-color: #7c3aed; }
+        .result-card { border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+        .result-correct { background: #ecfdf5; border: 2px solid #6ee7b7; }
+        .result-wrong { background: #fef2f2; border: 2px solid #fca5a5; }
+        .result-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .stat-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; font-size: 13px; color: #4b5563; }
+        .report-box { margin-top: 12px; padding: 12px; background: #f8fafc; border-radius: 8px; font-size: 13px; white-space: pre-wrap; line-height: 1.6; color: #374151; }
+        .chat-bubble { background: #ede9fe; border-radius: 12px; padding: 16px; white-space: pre-wrap; line-height: 1.6; font-size: 14px; }
+        .level-up { animation: bounce 0.6s ease; }
+        @keyframes bounce { 0%,100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+      `}</style>
+
+      <header className="header">
+        <h1>🎓 智能学习小助手</h1>
+        <p>和 AI 老师一起学数学吧~ 学习者：{learnerId}</p>
       </header>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-        {/* 左侧：操作面板 */}
+      <div className="grid">
+        {/* 左侧 */}
         <div>
-          <h2>学习操作</h2>
-
-          <div style={{ marginBottom: 16 }}>
-            <label>知识点：</label>
-            <select
-              value={knowledgeId}
-              onChange={(e) => setKnowledgeId(e.target.value)}
-              style={{ padding: 8, borderRadius: 4, border: '1px solid #ddd', width: '100%' }}
-            >
-              <option value="arithmetic">四则运算</option>
-              <option value="fractions">分数运算</option>
-              <option value="algebraic_expr">代数式</option>
-              <option value="linear_eq_1">一元一次方程</option>
-              <option value="factoring">因式分解</option>
-              <option value="quadratic_eq">一元二次方程</option>
-              <option value="quadratic_func">二次函数</option>
-              <option value="pythagorean">勾股定理</option>
-              <option value="probability">概率初步</option>
-            </select>
-          </div>
-
-          <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-            <button
-              onClick={() => handleSubmit(true)}
-              style={{
-                flex: 1, padding: 12, borderRadius: 8,
-                background: '#10b981', color: '#fff', border: 'none',
-                cursor: 'pointer', fontSize: 16,
-              }}
-            >
-              答对了
-            </button>
-            <button
-              onClick={() => handleSubmit(false)}
-              style={{
-                flex: 1, padding: 12, borderRadius: 8,
-                background: '#ef4444', color: '#fff', border: 'none',
-                cursor: 'pointer', fontSize: 16,
-              }}
-            >
-              答错了
+          {/* 知识点选择 */}
+          <div className="card">
+            <h2>📚 选择知识点</h2>
+            <div className="knowledge-grid">
+              {KNOWLEDGE_OPTIONS.map(k => (
+                <button
+                  key={k.id}
+                  className={`knowledge-btn ${knowledgeId === k.id ? 'active' : ''}`}
+                  onClick={() => setKnowledgeId(k.id)}
+                >
+                  {k.name}
+                </button>
+              ))}
+            </div>
+            <button className="btn btn-primary" onClick={fetchQuestion}>
+              🎲 来一道题
             </button>
           </div>
 
-          <div style={{ marginBottom: 16 }}>
-            <textarea
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="输入你的问题..."
-              style={{
-                width: '100%', padding: 8, borderRadius: 4,
-                border: '1px solid #ddd', minHeight: 80, resize: 'vertical',
-              }}
-            />
-            <button
-              onClick={handleQuestion}
-              style={{
-                marginTop: 8, padding: '8px 16px', borderRadius: 8,
-                background: '#3b82f6', color: '#fff', border: 'none',
-                cursor: 'pointer', width: '100%',
-              }}
-            >
-              提问
-            </button>
-          </div>
+          {/* 题目展示 */}
+          {question && (
+            <div className="card" style={{ marginTop: 16 }}>
+              <h2>✍️ 答题</h2>
+              <div className="question-card">
+                <span className="question-type">
+                  {question.type === 'choice' ? '选择题' : question.type === 'fill' ? '填空题' : '解答题'}
+                </span>
+                <p className="question-stem">{question.stem}</p>
 
-          <div style={{
-            padding: 12, borderRadius: 8,
-            background: '#f8fafc', border: '1px solid #e2e8f0',
-          }}>
-            <h3 style={{ margin: '0 0 8px' }}>Agent 状态</h3>
-            {Object.entries(AGENT_COLORS).filter(([k]) => k !== 'api').map(([name, color]) => (
-              <div key={name} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
-                <div style={{ width: 12, height: 12, borderRadius: '50%', background: color }} />
-                <span style={{ fontSize: 14 }}>{name}</span>
+                {question.type === 'choice' && question.options && (
+                  <div>
+                    {Object.entries(question.options).map(([key, val]) => (
+                      <label key={key} className={`option-label ${answer === key ? 'selected' : ''}`}>
+                        <input type="radio" name="choice" value={key} checked={answer === key} onChange={e => setAnswer(e.target.value)} style={{ display: 'none' }} />
+                        <strong>{key}.</strong> {val}
+                      </label>
+                    ))}
+                  </div>
+                )}
+
+                {question.type === 'fill' && (
+                  <input type="text" value={answer} onChange={e => setAnswer(e.target.value)} placeholder="输入你的答案..." />
+                )}
+
+                {question.type === 'open' && (
+                  <textarea value={answer} onChange={e => setAnswer(e.target.value)} placeholder="写出完整解题步骤..." style={{ minHeight: 100 }} />
+                )}
               </div>
-            ))}
+              <button className="btn btn-success" onClick={handleSubmit} disabled={loading || !answer.trim()}>
+                {loading ? '⏳ 判题中...' : '✅ 提交答案'}
+              </button>
+            </div>
+          )}
+
+          {/* 对话 */}
+          <div className="card" style={{ marginTop: 16 }}>
+            <h2>💬 问老师</h2>
+            <textarea value={message} onChange={e => setMessage(e.target.value)} placeholder="有什么不懂的尽管问~" style={{ minHeight: 60, marginBottom: 10 }} />
+            <button className="btn btn-chat" onClick={handleChat} disabled={chatLoading || !message.trim()}>
+              {chatLoading ? '🤔 思考中...' : '🚀 发送'}
+            </button>
           </div>
         </div>
 
-        {/* 右侧：事件流 */}
+        {/* 右侧 */}
         <div>
-          <h2>Agent 事件流 ({events.length})</h2>
-          <div style={{
-            maxHeight: 600,
-            overflowY: 'auto',
-            border: '1px solid #e2e8f0',
-            borderRadius: 8,
-            padding: 12,
-          }}>
-            {events.length === 0 ? (
-              <p style={{ color: '#999', textAlign: 'center' }}>
-                点击"答对了"或"答错了"触发Agent事件流
-              </p>
-            ) : (
-              [...events].reverse().map((event, i) => (
-                <EventCard key={i} event={event} />
-              ))
-            )}
-          </div>
+          {/* 判题结果 */}
+          {submitResult && (
+            <div className={`card result-card ${submitResult.is_correct ? 'result-correct' : 'result-wrong'}`}>
+              <div className={`result-title ${submitResult.level_changed ? 'level-up' : ''}`}>
+                {submitResult.is_correct ? '🎉 答对啦！' : '😅 答错了~'}
+                {submitResult.level_changed && ' 🆙 升级！'}
+              </div>
+              {submitResult.feedback && <p style={{ color: '#6b7280', fontSize: 13, marginBottom: 8 }}>{submitResult.feedback}</p>}
+              <div className="stat-row">
+                <span>{MASTERY_EMOJI[submitResult.mastery_level] || '📊'}</span>
+                <span>掌握度：<strong>{(submitResult.mastery * 100).toFixed(1)}%</strong>（{submitResult.mastery_level}）</span>
+              </div>
+              <div className="stat-row">
+                <span>{STATE_EMOJI[submitResult.session_state] || '📖'}</span>
+                <span>学习阶段：{submitResult.session_state}</span>
+              </div>
+              <div className="stat-row">
+                <span>{STATE_EMOJI[submitResult.engagement_state] || '😊'}</span>
+                <span>状态：{submitResult.engagement_state}</span>
+              </div>
+              <div className="report-box">{submitResult.report}</div>
+            </div>
+          )}
+
+          {/* 对话回复 */}
+          {chatResponse && (
+            <div className="card" style={{ marginTop: submitResult ? 16 : 0 }}>
+              <h2>🧑‍🏫 老师说</h2>
+              <div className="chat-bubble">{chatResponse}</div>
+            </div>
+          )}
+
+          {/* 空状态 */}
+          {!submitResult && !chatResponse && (
+            <div className="card" style={{ textAlign: 'center', padding: 40 }}>
+              <div style={{ fontSize: 48, marginBottom: 12 }}>🌟</div>
+              <p style={{ color: '#9ca3af' }}>选一个知识点，点"来一道题"开始学习吧~</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
+    </>
   )
 }

@@ -1,0 +1,447 @@
+2026-05-31 10:23:51.906 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 10:23:51.976 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 10:24:43.399 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 10:24:43.730 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 10:44:21.297 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 10:44:21.311 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 10:49:32.654 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 10:49:33.029 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 11:00:51.033 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 11:00:51.046 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 11:01:38.645 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 11:01:38.953 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 11:41:56.237 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 11:41:56.249 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 11:42:44.947 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 11:42:45.316 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 11:47:00.061 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 11:47:00.122 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 11:47:48.406 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 11:47:48.715 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:03:01.604 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:03:01.622 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:03:50.233 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:03:50.591 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:04:19.953 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:04:19.962 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:05:03.902 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:05:04.190 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:05:33.747 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:05:33.757 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:06:10.700 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:06:10.985 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:10:35.200 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:10:35.266 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:11:19.100 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:11:19.386 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:11:49.004 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:11:49.021 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:12:33.621 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:12:33.901 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:16:53.041 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 12:16:53.096 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 12:17:34.864 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 12:17:35.159 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 12:43:23.842 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 12:43:23.848 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 12:43:30.783 | INFO     | src.core.llm_client:chat:31 - LLM response: learn...
+2026-05-31 12:43:30.813 | INFO     | src.core.state_machine:trigger:26 - 状态转移: ONBOARDING ->start_learning -> LEARNING
+2026-05-31 12:43:30.813 | INFO     | src.core.session_tracker:on_chat:19 - 用户开始学习
+2026-05-31 12:43:30.814 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: learn
+2026-05-31 12:43:30.840 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 12:43:30.843 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 12:43:30.843 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 12:43:32.268 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，这是一个为您量身定制的简短教学计划：
+
+1.  **教学目标**：掌握一元二次方程的基本概念，...
+2026-05-31 12:43:32.269 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，这是一个为您量身定制的简短教学计划：
+
+1.  **教学目标**：掌握一元二次方程的基本概念，能求解标准形式的一元二次方程。
+2.  **教学步骤**：
+    *   第一步：认识一元二次方程的标准形式（ax²+bx+c=0, a≠0），理解各项的含义，并练习识别。
+    *   第二步：学习并练习因式分解法（十字相乘法）求解方程。
+    *   第三步：学习并练习使用求根公式法（x=[-b±√(b²-4ac)]/2a）求解方程。
+3.  **预计难度**：beginner
+2026-05-31 12:43:32.271 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 1
+2026-05-31 12:43:32.277 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_001 FOCUSED, 无需干预
+2026-05-31 12:43:32.283 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 12:43:32.285 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 12:43:32.286 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 12:43:33.367 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: 我想学习一元二次方程...
+2026-05-31 12:43:38.820 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，让我们开始吧！你就像一位侦探，要解开一个关于“x”的谜题。既然你是初学者，我们先从最基础的地方...
+2026-05-31 12:43:38.823 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 12:43:38.823 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 12:43:38.828 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 12:43:38.828 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 12:43:39.418 | INFO     | src.core.llm_client:chat:31 - LLM response: pass...
+2026-05-31 12:43:39.419 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: pass
+2026-05-31 12:43:39.559 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for test_001
+2026-05-31 13:22:24.258 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 13:22:24.269 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 13:23:10.600 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 13:23:10.938 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 16:36:43.332 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 16:36:43.356 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 16:38:38.818 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 16:38:40.615 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 17:57:02.819 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 17:57:02.823 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 17:58:21.486 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 17:58:22.271 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 17:58:22.294 | INFO     | src.api.main:health_check:33 - Health check received
+2026-05-31 17:58:28.184 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 17:58:28.941 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 17:58:37.171 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 17:58:37.171 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/quadratic_eq correct=True, mastery: 0.100 → 0.433
+2026-05-31 17:58:37.234 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 17:58:46.053 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 17:58:46.053 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->error -> STRUGGLING
+2026-05-31 17:58:46.053 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/quadratic_eq correct=False, mastery: 0.433 → 0.224
+2026-05-31 17:58:46.062 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 17:59:26.733 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 17:59:26.734 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 17:59:30.066 | INFO     | src.core.llm_client:chat:31 - LLM response: chat...
+2026-05-31 17:59:30.067 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: chat
+2026-05-31 17:59:30.074 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 17:59:30.074 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 17:59:30.074 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: engagement
+2026-05-31 17:59:31.041 | INFO     | src.core.llm_client:chat:31 - LLM response: 看到你在二次方程上刚刚起步，这很正常。第一次出错只是帮你找到方向，就像解方程的第一步总是需要摸索一样...
+2026-05-31 17:59:31.042 | INFO     | src.agents.engagement_agent:execute:83 - [EngagementAgent] student_001 state=STRUGGLING, intervention=encourage, action=hint
+2026-05-31 17:59:31.044 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 17:59:31.044 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 17:59:31.046 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: hint
+2026-05-31 17:59:31.711 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: hello...
+2026-05-31 17:59:33.698 | INFO     | src.core.llm_client:chat:31 - LLM response: 你好！看起来你刚刚开始学习一元二次方程，这很酷！你已经知道一元二次方程的一般形式是 **ax² + ...
+2026-05-31 17:59:33.700 | INFO     | src.agents.hint_agent:execute:53 - [HintAgent] 生成 Level 2 提示
+2026-05-31 17:59:33.700 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=hint, dispatched
+2026-05-31 17:59:33.706 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 17:59:33.707 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 17:59:34.255 | INFO     | src.core.llm_client:chat:31 - LLM response: pass...
+2026-05-31 17:59:34.255 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: pass
+2026-05-31 17:59:34.264 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for student_001
+2026-05-31 18:05:38.502 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 18:05:38.506 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 18:07:05.536 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 18:07:07.462 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 18:14:39.262 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 18:14:39.271 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/arithmetic correct=True, mastery: 0.100 → 0.433
+2026-05-31 18:14:39.333 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 18:14:56.405 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 18:14:56.406 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/arithmetic correct=True, mastery: 0.433 → 0.809
+2026-05-31 18:14:56.420 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 18:15:06.823 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 18:15:06.823 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/linear_eq_1 correct=True, mastery: 0.100 → 0.433
+2026-05-31 18:15:06.834 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 18:15:26.195 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 18:15:26.195 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/factoring correct=True, mastery: 0.100 → 0.433
+2026-05-31 18:15:26.205 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 18:15:35.428 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 18:15:35.429 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->too_easy -> BORED
+2026-05-31 18:15:35.429 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/arithmetic correct=True, mastery: 0.809 → 0.958
+2026-05-31 18:15:35.438 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 18:15:55.004 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:15:55.006 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 18:16:04.462 | INFO     | src.core.llm_client:chat:31 - LLM response: learn...
+2026-05-31 18:16:04.462 | INFO     | src.core.state_machine:trigger:26 - 状态转移: ONBOARDING ->start_learning -> LEARNING
+2026-05-31 18:16:04.463 | INFO     | src.core.session_tracker:on_chat:19 - 用户开始学习
+2026-05-31 18:16:04.464 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: learn
+2026-05-31 18:16:04.468 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:04.470 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 18:16:04.470 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 18:16:06.541 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据学生的学习请求和当前水平，我为您制定以下教学计划：
+
+1. **教学目标**：帮助学生建立...
+2026-05-31 18:16:06.543 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据学生的学习请求和当前水平，我为您制定以下教学计划：
+
+1. **教学目标**：帮助学生建立“如何思考问题”的基本框架，从无头绪到能尝试分析简单问题。
+2. **教学步骤**：
+   - 步骤1：引导识别问题类型（如“是什么”、“为什么”、“怎么做”），并用生活例子（如“怎么选午餐”）练习分类。
+   - 步骤2：教授“拆解问题”技巧，将大问题分解为小问题（例如“午餐选什么”拆成“想吃啥”、“预算多少”等），并做一次模拟练习。
+   - 步骤3：通过一个简单问题（如“怎么安排周末时间”），让学生独立尝试上述两步，并给予反馈。
+3. **预计难度**：beginner
+2026-05-31 18:16:06.544 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 1
+2026-05-31 18:16:06.553 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:06.554 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 18:16:06.556 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: engagement
+2026-05-31 18:16:07.757 | INFO     | src.core.llm_client:chat:31 - LLM response: 刚才的二次方程练习可能有点基础了，要不要试试挑战一道需要两步因式分解的题目？你还没怎么接触这类题，说...
+2026-05-31 18:16:07.759 | INFO     | src.agents.engagement_agent:execute:83 - [EngagementAgent] student_001 state=BORED, intervention=challenge, action=advance
+2026-05-31 18:16:07.760 | INFO     | src.agents.curriculum_agent:execute:53 - [CurriculumAgent] 推荐: 负数, 模式: suggest
+2026-05-31 18:16:07.760 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=advance, dispatched
+2026-05-31 18:16:07.765 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:07.765 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 18:16:08.779 | INFO     | src.core.llm_client:chat:31 - LLM response: fail...
+2026-05-31 18:16:08.783 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: fail
+2026-05-31 18:16:08.795 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:08.796 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 18:16:08.797 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 18:16:10.479 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据学生的学习请求和当前水平，以下是为您制定的教学计划：
+
+1. **教学目标**：帮助学生建...
+2026-05-31 18:16:10.486 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据学生的学习请求和当前水平，以下是为您制定的教学计划：
+
+1. **教学目标**：帮助学生建立“如何思考问题”的基本框架，掌握从零开始分析问题的第一步。
+
+2. **教学步骤**：
+   - 步骤1：引导识别问题核心——教学生通过“是什么、为什么、怎么办”三问，拆解问题的关键要素。
+   - 步骤2：示范简单案例——用生活化例子（如“如何安排周末时间”），展示如何从目标倒推步骤，并让学生模仿练习。
+
+3. **预计难度**：beginner
+2026-05-31 18:16:10.493 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 2
+2026-05-31 18:16:10.501 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:10.502 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 18:16:10.502 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: engagement
+2026-05-31 18:16:11.496 | INFO     | src.core.llm_client:chat:31 - LLM response: 看你这么快就进入二次方程了，这章其实藏着不少有趣的规律。要不先试试把这个方程配成完全平方？说不定能发...
+2026-05-31 18:16:11.502 | INFO     | src.agents.engagement_agent:execute:83 - [EngagementAgent] student_001 state=BORED, intervention=challenge, action=advance
+2026-05-31 18:16:11.504 | INFO     | src.agents.curriculum_agent:execute:53 - [CurriculumAgent] 推荐: 负数, 模式: suggest
+2026-05-31 18:16:11.506 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=advance, dispatched
+2026-05-31 18:16:11.517 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 18:16:11.531 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 18:16:12.077 | INFO     | src.core.llm_client:chat:31 - LLM response: fail...
+2026-05-31 18:16:12.079 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: fail
+2026-05-31 18:16:12.091 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for student_001
+2026-05-31 22:40:46.791 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 22:40:46.804 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 22:43:13.329 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 22:43:13.662 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 22:43:13.715 | INFO     | src.api.main:auto_init_embeddings:77 - [Startup] knowledge_embeddings 已有 22 条数据，跳过导入
+2026-05-31 22:43:13.715 | INFO     | src.storage.projection_worker:run_projection_loop:42 - [ProjectionWorker] 后台投影任务启动
+2026-05-31 22:43:13.787 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:43:13.793 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:43:13.797 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:43:13.803 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:43:13.807 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:43:13.822 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.828 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.832 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-05-31 22:43:13.834 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.839 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.847 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.849 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.858 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:43:13.861 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-05-31 22:44:00.117 | INFO     | src.core.student_manager:restore_from_db:72 - Restored state for student_001 from DB
+2026-05-31 22:44:00.130 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-31 22:44:00.132 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + success
+2026-05-31 22:44:00.135 | INFO     | src.core.state_machine:trigger:26 - 状态转移: LEARNING ->start_practice -> PRACTICING
+2026-05-31 22:44:00.137 | INFO     | src.agents.assessment_agent:execute:65 - [AssessmentAgent] student_001/arithmetic correct=True, mastery: 0.958 → 0.992
+2026-05-31 22:44:00.202 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for student_001
+2026-05-31 22:44:00.208 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:47:58.239 | INFO     | src.core.student_manager:restore_from_db:72 - Restored state for test_001 from DB
+2026-05-31 22:47:58.513 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:47:58.513 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 22:48:09.011 | INFO     | src.core.llm_client:chat:31 - LLM response: learn...
+2026-05-31 22:48:09.014 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: learn
+2026-05-31 22:48:09.023 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:09.023 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:48:09.023 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:48:11.342 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，这是一个针对您当前水平（未开始）制定的简短教学计划。
+
+1.  **教学目标**：理解一元二次...
+2026-05-31 22:48:11.344 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，这是一个针对您当前水平（未开始）制定的简短教学计划。
+
+1.  **教学目标**：理解一元二次方程的基本形式，并掌握使用因式分解法求解简单方程。
+
+2.  **教学步骤**：
+    *   **第一步：认识标准形式（ax² + bx + c = 0）**。通过具体例子（如 x² - 5x + 6 = 0）讲解什么是二次项、一次项和常数项，并练习识别。
+    *   **第二步：学习因式分解法**。重点讲解如何将二次三项式分解为两个一次因式的乘积（如 (x-2)(x-3) = 0），并利用“零乘积性质”求解方程。
+
+3.  **预计难度**：beginner
+2026-05-31 22:48:11.345 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 1
+2026-05-31 22:48:11.348 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_001 FOCUSED, 无需干预
+2026-05-31 22:48:11.356 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:11.356 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:48:11.359 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 22:48:12.284 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: 我想学习一元二次方程...
+2026-05-31 22:48:17.495 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，让我们开始吧。想象一下，我们面前有一个“天平”，它必须始终保持平衡。你提到的“一元二次方程”，...
+2026-05-31 22:48:17.496 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 22:48:17.497 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 22:48:17.499 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:17.501 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:48:18.720 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "pass", "reason": "教学回复覆盖了教学目标（解一元二次方程）...
+2026-05-31 22:48:18.722 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "pass", "reason": "教学回复覆盖了教学目标（解一元二次方程），使用了天平比喻和因式分解方法，语言难度适合学生，采用引导式提问，内容准确无误。"}
+2026-05-31 22:48:18.727 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:18.727 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:48:18.727 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:48:21.413 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据你的学习请求，以下是为你量身定制的教学计划：
+
+1.  **教学目标**：掌握一元二次方程...
+2026-05-31 22:48:21.414 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据你的学习请求，以下是为你量身定制的教学计划：
+
+1.  **教学目标**：掌握一元二次方程的标准形式、求根公式，并能熟练解简单的一元二次方程。
+2.  **教学步骤**：
+    *   **步骤一：认识与因式分解法**：学习一元二次方程的标准形式 \( ax^2 + bx + c = 0 \)，并通过因式分解法（如十字相乘法）解方程。
+    *   **步骤二：配方法与求根公式**：学习配方法推导求根公式，掌握 \( x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \) 的运用，并理解判别式 \( \Delta = b^2 - 4ac \) 的意义。
+3.  **预计难度**：beginner
+2026-05-31 22:48:21.414 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 2
+2026-05-31 22:48:21.415 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_001 FOCUSED, 无需干预
+2026-05-31 22:48:21.419 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:21.420 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:48:21.420 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 22:48:21.500 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: 我想学习一元二次方程...
+2026-05-31 22:48:30.439 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，让我们开始吧。你准备好探索一元二次方程的世界了吗？别担心，我会像苏格拉底一样，用问题引导你，让...
+2026-05-31 22:48:30.439 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 22:48:30.439 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 22:48:30.444 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:48:30.444 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:48:31.669 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "pass", "reason": "该教学回复完整覆盖了认识一元二次方程、标...
+2026-05-31 22:48:31.669 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "pass", "reason": "该教学回复完整覆盖了认识一元二次方程、标准形式、因式分解、配方法、求根公式与判别式等计划中的教学目标；语言难度适合学生水平，使用了苏格拉底式引导提问；内容准确无误，无知识性错误。"}
+2026-05-31 22:48:31.763 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for test_001
+2026-05-31 22:48:31.806 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:51:42.999 | INFO     | src.api.main:health_check:33 - Health check received
+2026-05-31 22:51:55.307 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:51:55.307 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 22:51:56.453 | INFO     | src.core.llm_client:chat:31 - LLM response: chat...
+2026-05-31 22:51:56.454 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: chat
+2026-05-31 22:51:56.454 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_debug FOCUSED, 无需干预
+2026-05-31 22:51:56.460 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:51:56.460 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:51:56.460 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 22:51:56.797 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: hello...
+2026-05-31 22:52:00.708 | INFO     | src.core.llm_client:chat:31 - LLM response: 你好！很高兴你开始学习二次方程。我们先从最基础的地方开始。
+
+你说“hello”，那我们就从打招呼开...
+2026-05-31 22:52:00.719 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 22:52:00.724 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 22:52:00.767 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:00.768 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:52:03.252 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "pass", "reason": "该回复完全覆盖了教学计划中的教学目标（认...
+2026-05-31 22:52:03.253 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "pass", "reason": "该回复完全覆盖了教学计划中的教学目标（认识二次方程形式、区分一次与二次方程、理解解的概念与判别式），语言难度匹配学生水平，使用了引导式教学（提问、类比、猜谜），内容准确无误。"}
+2026-05-31 22:52:03.266 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:03.266 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:52:03.266 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:52:05.578 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据你的学习请求，以下是为你制定的简短教学计划：
+
+1.  **教学目标**：掌握“Hello...
+2026-05-31 22:52:05.578 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据你的学习请求，以下是为你制定的简短教学计划：
+
+1.  **教学目标**：掌握“Hello”作为基本问候语的正确发音和使用场景。
+2.  **教学步骤**：
+    *   **步骤一：发音模仿**：跟我读“Hello”，注意“he”的发音像“喝”，但更轻；“llo”的发音要清晰，像“楼”但舌头抵住上颚。重复3遍。
+    *   **步骤二：场景应用**：学习在见面时使用“Hello”打招呼，并配合微笑和挥手动作。练习说“Hello, how are you?”（你好，你好吗？）
+3.  **预计难度**：beginner
+2026-05-31 22:52:05.580 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 1
+2026-05-31 22:52:05.583 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_debug FOCUSED, 无需干预
+2026-05-31 22:52:05.589 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:05.589 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:52:05.589 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 22:52:05.742 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: hello...
+2026-05-31 22:52:08.012 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，让我们开始学习二次方程吧。不过，我注意到你的第一个问题是“hello”，这很有趣。我们先从一个...
+2026-05-31 22:52:08.013 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 22:52:08.014 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 22:52:08.019 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:08.019 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:52:09.389 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "fail", "reason": "教学计划是关于二次方程，但教师以打招呼和...
+2026-05-31 22:52:09.390 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "fail", "reason": "教学计划是关于二次方程，但教师以打招呼和一元一次方程为例，严重偏离了二次方程的教学目标。"}
+2026-05-31 22:52:09.395 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:09.404 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:52:09.405 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:52:11.596 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据你的学习请求，以下是为你制定的简短教学计划：
+
+1.  **教学目标**：掌握“Hello...
+2026-05-31 22:52:11.596 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据你的学习请求，以下是为你制定的简短教学计划：
+
+1.  **教学目标**：掌握“Hello”的正确发音和基本用法，能够用于日常打招呼。
+2.  **教学步骤**：
+    *   **步骤一：发音与识别**：学习“Hello”的标准发音（/həˈloʊ/），通过跟读和听辨练习，确保能准确发音并识别。
+    *   **步骤二：情境应用**：学习在问候、接电话、吸引注意等场景中使用“Hello”，并进行简单的对话模拟练习。
+3.  **预计难度**：beginner
+2026-05-31 22:52:11.599 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 2
+2026-05-31 22:52:11.599 | INFO     | src.agents.engagement_agent:execute:59 - [EngagementAgent] test_debug FOCUSED, 无需干预
+2026-05-31 22:52:11.610 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:11.610 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:52:11.611 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: tutor
+2026-05-31 22:52:11.748 | INFO     | src.storage.rag:hybrid_rag:52 - RAG retrieved 14 items for: hello...
+2026-05-31 22:52:13.556 | INFO     | src.core.llm_client:chat:31 - LLM response: 我注意到你发来了“hello”，这看起来像是一个问候。不过，我们的教学计划是关于一元二次方程的。你愿...
+2026-05-31 22:52:13.557 | INFO     | src.agents.tutor_agent:execute:40 - [TutorAgent] 生成教学内容完成
+2026-05-31 22:52:13.559 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=continue, dispatched
+2026-05-31 22:52:13.564 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:52:13.564 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:52:15.068 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "pass", "reason": "回复覆盖了教学计划中一元二次方程的目标，...
+2026-05-31 22:52:15.069 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "pass", "reason": "回复覆盖了教学计划中一元二次方程的目标，用抛物线引入方程的解，语言难度适合学生水平，采用了引导式提问，内容准确无误。"}
+2026-05-31 22:52:15.099 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for test_debug
+2026-05-31 22:52:15.123 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_debug
+2026-05-31 22:57:39.846 | INFO     | src.storage.projection_worker:run_projection_loop:57 - [ProjectionWorker] 后台投影任务已停止
+2026-05-31 22:57:39.871 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-31 22:57:39.873 | INFO     | src.storage.vector_store:close:26 - VectorStore closed
+2026-05-31 22:58:40.898 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-31 22:58:42.070 | INFO     | src.storage.vector_store:connect:21 - VectorStore connected
+2026-05-31 22:58:42.113 | INFO     | src.api.main:auto_init_embeddings:78 - [Startup] knowledge_embeddings 已有 22 条数据，跳过导入
+2026-05-31 22:58:42.115 | INFO     | src.storage.projection_worker:run_projection_loop:42 - [ProjectionWorker] 后台投影任务启动
+2026-05-31 22:58:42.167 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.173 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.179 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.184 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.190 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.202 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.207 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.212 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-05-31 22:58:42.219 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.222 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.230 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.236 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.241 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.245 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-05-31 22:58:42.252 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-05-31 22:58:42.257 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-05-31 22:58:42.262 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_debug
+2026-05-31 22:59:28.617 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:28.623 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-31 22:59:29.599 | INFO     | src.core.llm_client:chat:31 - LLM response: learn...
+2026-05-31 22:59:29.603 | INFO     | src.graph.education_graph:Router:59 - [node1]处理中，意图分类为: learn
+2026-05-31 22:59:29.624 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:29.624 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:59:29.624 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:59:31.787 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，根据您的请求，以下是针对该学生问题的教学计划：
+
+1.  **教学目标**：帮助学生掌握常见题...
+2026-05-31 22:59:31.789 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，根据您的请求，以下是针对该学生问题的教学计划：
+
+1.  **教学目标**：帮助学生掌握常见题型的解题模板，提升答题效率和准确性。
+2.  **教学步骤**：
+    -   第一步：识别题型并拆解模板结构（例如，对于“阅读理解”题，模板包括：定位关键词→分析上下文→排除干扰项）。
+    -   第二步：通过1-2个典型例题，示范模板的具体应用，并引导学生模仿练习。
+    -   第三步：提供变式练习，让学生独立使用模板解题，并纠正错误。
+3.  **预计难度**：beginner（基础入门阶段，适合从零开始学习模板）
+2026-05-31 22:59:31.791 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 1
+2026-05-31 22:59:31.802 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:31.803 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:59:31.803 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: engagement
+2026-05-31 22:59:33.036 | INFO     | src.core.llm_client:chat:31 - LLM response: 感觉二次方程这块儿还没真正“玩”起来？试试解这道特别的题：x² + 2x + 1 = 0，看看能不能...
+2026-05-31 22:59:33.036 | INFO     | src.agents.engagement_agent:execute:83 - [EngagementAgent] student_001 state=BORED, intervention=challenge, action=advance
+2026-05-31 22:59:33.045 | INFO     | src.agents.curriculum_agent:execute:53 - [CurriculumAgent] 推荐: 负数, 模式: suggest
+2026-05-31 22:59:33.045 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=advance, dispatched
+2026-05-31 22:59:33.056 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:33.056 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:59:34.641 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "fail", "reason": "教学回复中的题目（x² + 2x + 1...
+2026-05-31 22:59:34.643 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "fail", "reason": "教学回复中的题目（x² + 2x + 1 = 0）属于一元二次方程，但学生当前学习路径尚未到达该知识点（路径显示一元二次方程在因式分解之后），且推荐下一个知识点为负数，题目难度与学生水平不匹配，偏离了教学计划。"}
+2026-05-31 22:59:34.655 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:34.658 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:59:34.658 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-31 22:59:37.171 | INFO     | src.core.llm_client:chat:31 - LLM response: 好的，这是一个针对你当前水平的教学计划。
+
+1.  **教学目标**：掌握此类题目的基本答题模板，能...
+2026-05-31 22:59:37.173 | INFO     | src.graph.education_graph:Planner:68 - [node2]处理中，计划为: 好的，这是一个针对你当前水平的教学计划。
+
+1.  **教学目标**：掌握此类题目的基本答题模板，能够套用模板完成基础题目。
+2.  **教学步骤**：
+    -   **步骤一**：先拆解题目类型，明确它属于哪种常见题型（如：议论文、应用文、阅读理解等），然后给出该题型的通用结构模板（例如：总-分-总结构）。
+    -   **步骤二**：通过一道简单例题，引导你一步步套用模板填充内容，重点讲解每个部分如何构思和落笔。
+    -   **步骤三**：让你独立完成一道类似题目的练习，并对照模板检查，找出套用时的常见错误并纠正。
+3.  **预计难度**：beginner
+2026-05-31 22:59:37.174 | INFO     | src.graph.education_graph:Planner:69 - [node2]重试次数为: 2
+2026-05-31 22:59:37.181 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:37.181 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-31 22:59:37.181 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: engagement
+2026-05-31 22:59:38.681 | INFO     | src.core.llm_client:chat:31 - LLM response: 看到你面对二次方程时有点提不起劲，我们换个玩法吧——试试不按课本顺序，直接从应用题切入，看二次函数如...
+2026-05-31 22:59:38.682 | INFO     | src.agents.engagement_agent:execute:83 - [EngagementAgent] student_001 state=BORED, intervention=challenge, action=advance
+2026-05-31 22:59:38.682 | INFO     | src.agents.curriculum_agent:execute:53 - [CurriculumAgent] 推荐: 负数, 模式: suggest
+2026-05-31 22:59:38.682 | INFO     | src.graph.education_graph:Coordinator:130 - [Coordinator] action=advance, dispatched
+2026-05-31 22:59:38.686 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-31 22:59:38.686 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-31 22:59:39.945 | INFO     | src.core.llm_client:chat:31 - LLM response: {"result": "fail", "reason": "教学回复严重偏离教学计划，学生当前目标是...
+2026-05-31 22:59:39.945 | INFO     | src.graph.education_graph:Evaluator:138 - [node4]处理中，评估结果为: {"result": "fail", "reason": "教学回复严重偏离教学计划，学生当前目标是学习一元二次方程，但推荐的下一个知识点是负数，且学习路径绕远路，不符合教学计划的目标和进度要求。"}
+2026-05-31 22:59:40.045 | INFO     | src.storage.event_store:append:50 - Event appended: TEACHING_INTERACTION for student_001
+2026-05-31 22:59:40.048 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-06-01 00:13:09.711 | INFO     | src.storage.projection_worker:run_projection_loop:57 - [ProjectionWorker] 后台投影任务已停止
+2026-06-01 00:13:09.763 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-06-01 00:13:09.766 | INFO     | src.storage.vector_store:close:26 - VectorStore closed

@@ -1,0 +1,22 @@
+2026-06-01 00:14:25.778 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-06-01 00:14:26.113 | INFO     | src.storage.vector_store:connect:32 - VectorStore connected
+2026-06-01 00:14:26.166 | INFO     | src.api.main:auto_init_embeddings:82 - [Startup] knowledge_embeddings 已有 22 条数据，跳过导入
+2026-06-01 00:14:26.167 | INFO     | src.storage.projection_worker:run_projection_loop:42 - [ProjectionWorker] 后台投影任务启动
+2026-06-01 00:14:26.215 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.221 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.230 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.234 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.242 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.256 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.261 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.267 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-06-01 00:14:26.272 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.278 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.289 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.295 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.300 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.305 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001
+2026-06-01 00:14:26.309 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: STUDENT_ANSWER for student_001
+2026-06-01 00:14:26.314 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_001
+2026-06-01 00:14:26.319 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for test_debug
+2026-06-01 00:14:26.326 | INFO     | src.storage.projection_worker:run_projection_loop:55 - [ProjectionWorker] Projected: TEACHING_INTERACTION for student_001

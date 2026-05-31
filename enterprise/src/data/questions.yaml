@@ -1,0 +1,122 @@
+questions:
+  # ========== 四则运算 ==========
+  - id: "q_arith_001"
+    knowledge_id: "arithmetic"
+    type: "choice"
+    difficulty: 0.1
+    stem: "计算：12 × 5 - 18 ÷ 3 = ?"
+    options:
+      A: "54"
+      B: "56"
+      C: "60"
+      D: "48"
+    answer: "A"
+    explanation: "12×5=60, 18÷3=6, 60-6=54"
+  - id: "q_arith_002"
+    knowledge_id: "arithmetic"
+    type: "fill"
+    difficulty: 0.1
+    stem: "计算：(24 + 36) ÷ 4 = ____"
+    answer: "15"
+    tolerance: 0
+  # ========== 一元一次方程 ==========
+  - id: "q_linear1_001"
+    knowledge_id: "linear_eq_1"
+    type: "choice"
+    difficulty: 0.3
+    stem: "解方程 2x + 6 = 0，x = ?"
+    options:
+      A: "-3"
+      B: "3"
+      C: "-6"
+      D: "6"
+    answer: "A"
+    explanation: "2x = -6, x = -3"
+  - id: "q_linear1_002"
+    knowledge_id: "linear_eq_1"
+    type: "fill"
+    difficulty: 0.35
+    stem: "解方程 3x - 9 = 0，x = ____"
+    answer: "3"
+    tolerance: 0.01
+  - id: "q_linear1_003"
+    knowledge_id: "linear_eq_1"
+    type: "open"
+    difficulty: 0.4
+    stem: "请写出解方程 5x + 3 = 2x - 6 的完整步骤。"
+    answer: "移项得 5x-2x=-6-3，合并得 3x=-9，x=-3"
+    rubric:
+      - "正确移项（含变号）"
+      - "正确合并同类项"
+      - "得到正确答案 x=-3"
+  # ========== 因式分解 ==========
+  - id: "q_factor_001"
+    knowledge_id: "factoring"
+    type: "choice"
+    difficulty: 0.4
+    stem: "因式分解 x² - 9 = ?"
+    options:
+      A: "(x+3)(x-3)"
+      B: "(x+9)(x-1)"
+      C: "(x-3)²"
+      D: "(x+3)²"
+    answer: "A"
+    explanation: "平方差公式 a²-b² = (a+b)(a-b)"
+  - id: "q_factor_002"
+    knowledge_id: "factoring"
+    type: "fill"
+    difficulty: 0.45
+    stem: "因式分解 x² + 6x + 9 = (______)²"
+    answer: "x+3"
+    tolerance: 0
+  # ========== 一元二次方程 ==========
+  - id: "q_quad_001"
+    knowledge_id: "quadratic_eq"
+    type: "choice"
+    difficulty: 0.5
+    stem: "方程 x² - 5x + 6 = 0 的解是？"
+    options:
+      A: "x=2, x=3"
+      B: "x=-2, x=-3"
+      C: "x=2, x=-3"
+      D: "x=-2, x=3"
+    answer: "A"
+    explanation: "因式分解 (x-2)(x-3)=0，所以 x=2 或 x=3"
+  - id: "q_quad_002"
+    knowledge_id: "quadratic_eq"
+    type: "fill"
+    difficulty: 0.5
+    stem: "方程 x² - 4 = 0 的正数解是 x = ____"
+    answer: "2"
+    tolerance: 0.01
+  - id: "q_quad_003"
+    knowledge_id: "quadratic_eq"
+    type: "open"
+    difficulty: 0.6
+    stem: "请用求根公式求解方程 2x² + 3x - 2 = 0，写出完整步骤。"
+    answer: "a=2,b=3,c=-2。Δ=9+16=25。x=(-3±5)/4，得 x=1/2 或 x=-2"
+    rubric:
+      - "正确识别 a、b、c 的值"
+      - "正确计算判别式 Δ=b²-4ac=25"
+      - "正确代入求根公式"
+      - "得到两个正确的根 x=1/2 和 x=-2"
+  # ========== 概率初步 ==========
+  - id: "q_prob_001"
+    knowledge_id: "probability"
+    type: "choice"
+    difficulty: 0.35
+    stem: "一个袋子里有3个红球和2个白球，随机摸一个，摸到红球的概率是？"
+    options:
+      A: "3/5"
+      B: "2/5"
+      C: "1/2"
+      D: "3/2"
+    answer: "A"
+    explanation: "P(红) = 红球数/总球数 = 3/5"
+  - id: "q_prob_002"
+    knowledge_id: "probability"
+    type: "fill"
+    difficulty: 0.4
+    stem: "掷一个骰子，点数大于4的概率是____（用分数表示）"
+    answer: "1/3"
+    tolerance: 0

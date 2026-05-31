@@ -1,0 +1,26 @@
+2026-05-27 17:06:05.834 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:06:05.837 | WARNING  | src.core.state_machine:trigger:30 - 非法转移: FOCUSED + success
+2026-05-27 17:07:05.299 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:07:05.300 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->error -> STRUGGLING
+2026-05-27 17:07:17.402 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:07:17.403 | WARNING  | src.core.state_machine:trigger:30 - 非法转移: STRUGGLING + error
+2026-05-27 17:07:42.835 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:07:42.838 | INFO     | src.core.state_machine:trigger:26 - 状态转移: STRUGGLING ->repeated_error -> FRUSTRATED
+2026-05-27 17:08:37.533 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:08:37.534 | WARNING  | src.core.state_machine:trigger:30 - 非法转移: FRUSTRATED + success
+2026-05-27 17:16:45.185 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:16:45.189 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->error -> STRUGGLING
+2026-05-27 17:16:46.365 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:16:46.365 | INFO     | src.core.state_machine:trigger:26 - 状态转移: STRUGGLING ->error -> STRUGGLING
+2026-05-27 17:16:50.162 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:16:50.163 | INFO     | src.core.state_machine:trigger:26 - 状态转移: STRUGGLING ->repeated_error -> FRUSTRATED
+2026-05-27 17:19:08.513 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:19:08.514 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FRUSTRATED ->success -> STRUGGLING
+2026-05-27 17:19:20.615 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:19:20.617 | INFO     | src.core.state_machine:trigger:26 - 状态转移: STRUGGLING ->success -> FOCUSED
+2026-05-27 17:19:21.292 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:19:21.293 | WARNING  | src.core.state_machine:trigger:30 - 非法转移: FOCUSED + success
+2026-05-27 17:19:21.843 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:19:21.845 | WARNING  | src.core.state_machine:trigger:30 - 非法转移: FOCUSED + success
+2026-05-27 17:19:22.349 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-27 17:19:22.350 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->too_easy -> BORED

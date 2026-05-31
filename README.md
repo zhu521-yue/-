@@ -102,6 +102,7 @@ multi-agent-education/
 │
 ├── 📁 docs/                     ← 文档中心
 │   ├── architecture.md          ← 架构设计详解
+│   ├── agent-system-design.md   ← ⭐ Agent系统详细设计文档（面向小白）
 │   ├── interview-guide.md       ← ⭐ 面试完整指南（八股文+STAR+简历）
 │   ├── knowledge-points.md      ← 200+知识点体系
 │   └── deployment.md            ← 部署指南

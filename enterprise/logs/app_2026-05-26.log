@@ -1,0 +1,13 @@
+2026-05-26 11:50:10.601 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-26 11:50:10.607 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-26 11:50:14.653 | INFO     | src.core.llm_client:chat:26 - LLM response: learn...
+2026-05-26 11:50:14.660 | INFO     | src.graph.education_graph:Router:22 - [node1]处理中，意图分类为: learn
+2026-05-26 11:50:14.673 | INFO     | src.graph.education_graph:Planner:26 - [node2]处理中
+2026-05-26 11:50:14.676 | INFO     | src.graph.education_graph:Coordinator:30 - [node3]处理中
+2026-05-26 11:50:14.678 | INFO     | src.graph.education_graph:Evaluator:34 - [node4]处理中
+2026-05-26 11:50:56.137 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-26 11:50:56.138 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-26 11:50:56.875 | INFO     | src.core.llm_client:chat:26 - LLM response: chat...
+2026-05-26 11:50:56.876 | INFO     | src.graph.education_graph:Router:22 - [node1]处理中，意图分类为: chat
+2026-05-26 11:50:56.877 | INFO     | src.graph.education_graph:Coordinator:30 - [node3]处理中
+2026-05-26 11:50:56.879 | INFO     | src.graph.education_graph:Evaluator:34 - [node4]处理中

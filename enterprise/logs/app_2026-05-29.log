@@ -1,0 +1,5 @@
+2026-05-29 10:53:15.305 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-29 10:53:25.208 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-29 12:07:26.418 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-29 12:07:35.194 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-30 09:15:34.530 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection

@@ -1,0 +1,246 @@
+2026-05-28 10:25:19.697 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:25:19.700 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:26:21.123 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:26:21.124 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:26:27.872 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:26:27.873 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:28:08.891 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:28:08.898 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:28:19.607 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:28:19.607 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:42:01.055 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:01.059 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:42:02.151 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:02.152 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:42:13.028 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:13.029 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:42:52.929 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:52.929 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: FOCUSED + success
+2026-05-28 10:42:53.693 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:53.694 | INFO     | src.core.state_machine:trigger:26 - 状态转移: FOCUSED ->too_easy -> BORED
+2026-05-28 10:42:54.178 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:54.179 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:42:54.418 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:54.420 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:42:54.591 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:42:54.592 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:46:01.417 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:01.417 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-28 10:46:06.906 | INFO     | src.core.llm_client:chat:26 - LLM response: learn...
+2026-05-28 10:46:06.907 | INFO     | src.core.state_machine:trigger:26 - 状态转移: ONBOARDING ->start_learning -> LEARNING
+2026-05-28 10:46:06.908 | INFO     | src.core.session_tracker:on_chat:19 - 用户开始学习
+2026-05-28 10:46:06.908 | INFO     | src.graph.education_graph:Router:44 - [node1]处理中，意图分类为: learn
+2026-05-28 10:46:06.922 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:06.922 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 10:46:06.924 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-28 10:46:09.671 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，这是一个针对一元二次方程入门学习的简短教学计划。
+
+1.  **教学目标**：理解一元二次方程...
+2026-05-28 10:46:09.672 | INFO     | src.graph.education_graph:Planner:53 - [node2]处理中，计划为: 好的，这是一个针对一元二次方程入门学习的简短教学计划。
+
+1.  **教学目标**：理解一元二次方程的基本形式，并掌握使用因式分解法解简单的一元二次方程。
+
+2.  **教学步骤**：
+    *   **第一步：认识标准形式与基础概念**。讲解一元二次方程的标准形式 \( ax^2 + bx + c = 0 \)（其中 \( a \neq 0 \)），并通过实例区分二次项、一次项和常数项，建立方程的基本概念。
+    *   **第二步：学习因式分解法解方程**。重点讲解如何将方程转化为 \( (x + m)(x + n) = 0 \) 的形式，并利用“零乘积性质”求解。通过例题演示和针对性练习，掌握基础解法。
+
+3.  **预计难度**：beginner
+2026-05-28 10:46:09.673 | INFO     | src.graph.education_graph:Planner:54 - [node2]重试次数为: 1
+2026-05-28 10:46:09.680 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:09.680 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 10:46:09.681 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: coordinator
+2026-05-28 10:46:16.171 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，让我们开始吧！你之前学过一次方程，比如 \( 2x + 3 = 7 \)，对吧？现在，我们要进...
+2026-05-28 10:46:16.175 | INFO     | src.graph.education_graph:Coordinator:62 - [node3]处理中，响应为: 好的，让我们开始吧！你之前学过一次方程，比如 \( 2x + 3 = 7 \)，对吧？现在，我们要进入一个更有趣的领域。
+
+**第一步：从一次方程到二次方程**
+
+假设我问你：一个数的平方等于它本身，这个数是多少？也就是 \( x^2 = x \)。你能想到几个可能的答案吗？
+
+等等，别急着算。我们先想一想，一次方程 \( 2x + 3 = 7 \) 里，未知数 \( x \) 的最高次数是1。而 \( x^2 = x \) 里，出现了 \( x^2 \)，最高次数变成了2。这就是“二次”的由来。
+
+任何形如 \( ax^2 + bx + c = 0 \)（其中 \( a \neq 0 \)）的方程，都叫一元二次方程。比如 \( x^2 - 5x + 6 = 0 \)，这里的 \( a=1, b=-5, c=6 \)。你能在这个方程里，指出哪个是二次项、一次项和常数项吗？
+
+**第二步：用因式分解来“拆解”**
+
+好，现在回到 \( x^2 = x \)。如果我们把右边的 \( x \) 移到左边，就得到 \( x^2 - x = 0 \)。你看，它变成了标准形式 \( ax^2 + bx + c = 0 \)（这里 \( c=0 \)）。
+
+接下来是关键：我们能不能把这个式子拆成两个东西相乘等于0的形式？比如 \( x(x-1) = 0 \)。想一想，两个数相乘等于0，意味着什么？是不是至少有一个是0？这就是“零乘积性质”。
+
+所以，\( x(x-1) = 0 \) 意味着要么 \( x=0 \)，要么 \( x-1=0 \)。解得 \( x=0 \) 或 \( x=1 \)。你看，我们找到了两个答案！
+
+**现在，挑战一下你：**
+
+如果方程是 \( x^2 - 5x + 6 = 0 \)，你能试着把它写成 \( (x + m)(x + n) = 0 \) 的形式吗？提示：想想哪两个数相加等于 -5，相乘等于 6？
+2026-05-28 10:46:16.189 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:16.190 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-28 10:46:17.001 | INFO     | src.core.llm_client:chat:26 - LLM response: fail...
+2026-05-28 10:46:17.001 | INFO     | src.graph.education_graph:Evaluator:70 - [node4]处理中，评估结果为: fail
+2026-05-28 10:46:17.015 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:17.016 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 10:46:17.016 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-28 10:46:20.311 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，这是一个针对你目前水平（未开始，掌握度10%）制定的简短教学计划。
+
+1.  **教学目标**...
+2026-05-28 10:46:20.312 | INFO     | src.graph.education_graph:Planner:53 - [node2]处理中，计划为: 好的，这是一个针对你目前水平（未开始，掌握度10%）制定的简短教学计划。
+
+1.  **教学目标**：掌握一元二次方程的基本概念和求根公式，并能解简单的标准形式方程。
+2.  **教学步骤**：
+    *   **步骤一：理解基础概念**。学习一元二次方程的标准形式 (ax² + bx + c = 0, a≠0)，区分各项系数（二次项、一次项、常数项），并通过简单例子识别方程是否符合标准形式。
+    *   **步骤二：掌握求根公式**。学习并记忆求根公式 x = [-b ± √(b² - 4ac)] / (2a)，理解判别式 Δ = b² - 4ac 的含义（Δ>0有两个解，Δ=0有一个解，Δ<0无实数解）。
+    *   **步骤三：应用练习**。通过2-3个具体方程（如 x² - 5x + 6 = 0），代入公式计算求解，并验证结果是否正确。
+3.  **预计难度**：beginner
+2026-05-28 10:46:20.313 | INFO     | src.graph.education_graph:Planner:54 - [node2]重试次数为: 2
+2026-05-28 10:46:20.319 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:20.320 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 10:46:20.320 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: coordinator
+2026-05-28 10:46:25.321 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，我们开始吧。
+
+想象一下，你面前有一块正方形的土地。你想把它的边长增加一些，变成一个更大的正方...
+2026-05-28 10:46:25.322 | INFO     | src.graph.education_graph:Coordinator:62 - [node3]处理中，响应为: 好的，我们开始吧。
+
+想象一下，你面前有一块正方形的土地。你想把它的边长增加一些，变成一个更大的正方形。假设你增加的边长是某个数，那么最终面积的变化，就会和这个数的平方有关。这种“平方”的关系，在数学里非常常见。
+
+一元二次方程，就是专门处理这种“平方”关系的数学工具。它的标准形式是：`ax² + bx + c = 0`。这里的 `a`、`b`、`c` 是已知的数字，但 `a` 不能是0，否则就没有“平方”这一项了。比如，`x² - 5x + 6 = 0` 就是一个标准的一元二次方程。
+
+现在，我们面临一个核心问题：**我们怎么找到那个神秘的 `x`，让它代入方程后，等式成立呢？** 数学家们发现了一个万能钥匙——求根公式：
+`x = [-b ± √(b² - 4ac)] / (2a)`
+
+这个公式看起来很复杂，但它就像一个魔法咒语。你只需要把方程里的 `a`、`b`、`c` 分别找出来，然后代入这个公式，就能算出 `x` 的值。公式里的 `±` 意味着我们通常会得到两个答案（也可能是一个，或者没有实数答案，这取决于 `b² - 4ac` 这个部分，我们叫它判别式）。
+
+好了，现在请你思考一下：**如果有一个方程是 `x² - 5x + 6 = 0`，你能试着找出它的 `a`、`b`、`c` 分别是多少吗？**
+2026-05-28 10:46:25.327 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 10:46:25.327 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-28 10:46:25.893 | INFO     | src.core.llm_client:chat:26 - LLM response: pass...
+2026-05-28 10:46:25.894 | INFO     | src.graph.education_graph:Evaluator:70 - [node4]处理中，评估结果为: pass
+2026-05-28 10:48:26.042 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:48:26.043 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:48:26.043 | INFO     | src.core.state_machine:trigger:26 - 状态转移: LEARNING ->start_practice -> PRACTICING
+2026-05-28 10:48:27.342 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:48:27.342 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:48:28.741 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:48:28.742 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 10:48:47.644 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 10:48:47.645 | WARNING  | src.core.state_machine:trigger:31 - 非法转移: BORED + too_easy
+2026-05-28 14:51:16.953 | INFO     | src.storage.event_store:connect:20 - EventStore Connected to PostgreSQL
+2026-05-28 15:06:21.348 | INFO     | src.storage.event_store:close:25 - EventStore Closed PostgreSQL Connection
+2026-05-28 15:06:41.089 | INFO     | src.storage.event_store:connect:20 - EventStore Connected to PostgreSQL
+2026-05-28 15:13:47.070 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 15:13:47.376 | INFO     | src.storage.event_store:append:39 - Event appended: STUDENT_ANSWER for string
+2026-05-28 15:30:02.056 | INFO     | src.storage.event_store:close:25 - EventStore Closed PostgreSQL Connection
+2026-05-28 15:30:08.524 | INFO     | src.storage.event_store:connect:20 - EventStore Connected to PostgreSQL
+2026-05-28 15:30:50.138 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 15:30:50.138 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: router
+2026-05-28 15:30:57.075 | INFO     | src.core.llm_client:chat:26 - LLM response: learn...
+2026-05-28 15:30:57.078 | INFO     | src.core.state_machine:trigger:26 - 状态转移: ONBOARDING ->start_learning -> LEARNING
+2026-05-28 15:30:57.078 | INFO     | src.core.session_tracker:on_chat:19 - 用户开始学习
+2026-05-28 15:30:57.078 | INFO     | src.graph.education_graph:Router:44 - [node1]处理中，意图分类为: learn
+2026-05-28 15:30:57.092 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 15:30:57.095 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 15:30:57.096 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: planner
+2026-05-28 15:31:00.415 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，根据您的学习请求，我为您制定了以下教学计划：
+
+1.  **教学目标**：理解一元二次方程的基...
+2026-05-28 15:31:00.416 | INFO     | src.graph.education_graph:Planner:53 - [node2]处理中，计划为: 好的，根据您的学习请求，我为您制定了以下教学计划：
+
+1.  **教学目标**：理解一元二次方程的基本概念，掌握标准形式，并能用因式分解法求解简单方程。
+2.  **教学步骤**：
+    -   **第一步：认识一元二次方程**。学习标准形式 \( ax^2 + bx + c = 0 \)，理解各项含义（二次项、一次项、常数项），并通过实例练习识别方程类型。
+    -   **第二步：学习因式分解法**。掌握用十字相乘法或提取公因式法将方程化为 \( (x+m)(x+n)=0 \) 的形式，并求解出两个根。
+    -   **第三步：巩固与练习**。完成10道基础因式分解方程题，并尝试解决一个简单的应用题（如面积问题）。
+3.  **预计难度**：beginner
+2026-05-28 15:31:00.418 | INFO     | src.graph.education_graph:Planner:54 - [node2]重试次数为: 1
+2026-05-28 15:31:00.438 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 15:31:00.438 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: edu_base
+2026-05-28 15:31:00.438 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: coordinator
+2026-05-28 15:31:13.090 | INFO     | src.core.llm_client:chat:26 - LLM response: 好的，我们开始吧。让我们像散步一样，一步步走进一元二次方程的世界。
+
+---
+
+**第一步：认识一元...
+2026-05-28 15:31:13.091 | INFO     | src.graph.education_graph:Coordinator:62 - [node3]处理中，响应为: 好的，我们开始吧。让我们像散步一样，一步步走进一元二次方程的世界。
+
+---
+
+**第一步：认识一元二次方程**
+
+你之前学过一元一次方程，比如 \( 2x + 3 = 7 \)。它的特点是：只有一个未知数 \( x \)，并且 \( x \) 的最高次数是 1。
+
+现在，想象一下，如果这个未知数 \( x \) 和自己相乘，也就是出现了 \( x^2 \)（读作“x的平方”），那会怎样？比如：\( x^2 = 9 \)。
+
+**我问你**：这个方程里，\( x \) 的最高次数是几？如果 \( x^2 = 9 \)，那 \( x \) 可能等于多少呢？你能想到几个答案？
+
+---
+
+（等待学生回答，比如：最高次数是2，x可能是3，也可能是-3，因为 \( (-3)^2 = 9 \)）
+
+非常好！你发现了关键：有了平方，就可能有两个答案。
+
+我们把这种 **只有一个未知数，并且未知数的最高次数是2** 的方程，叫做 **一元二次方程**。
+
+它有一个标准形式，就像身份证一样：
+\[
+ax^2 + bx + c = 0
+\]
+这里：
+- \( a \) 是 **二次项系数**（\( a \) 不能为0，否则就不是二次了）
+- \( b \) 是 **一次项系数**
+- \( c \) 是 **常数项**
+
+比如：\( 2x^2 - 3x + 1 = 0 \)，这里的 \( a=2, b=-3, c=1 \)。
+
+**我来考考你**：下面这个方程 \( 4x^2 + 5 = 0 \)，你能说出它的 \( a, b, c \) 分别是多少吗？注意，没有出现的项，系数就是0。
+
+---
+
+（等待学生回答：\( a=4, b=0, c=5 \)）
+
+没错！\( b=0 \) 时，方程里就没有一次项了，但它仍然是一元二次方程。
+
+---
+
+**第二步：学习因式分解法**
+
+我们回到最初的例子：\( x^2 = 9 \)。
+
+你刚才已经用“开平方”的方法想到了两个答案。但如果我们遇到更复杂的方程，比如 \( x^2 + 5x + 6 = 0 \)，直接开平方就不太方便了。
+
+这时，我们可以用 **因式分解法**。它的核心思想是：**把乘法反过来想**。
+
+还记得 \( (x+2)(x+3) \) 展开后是什么吗？是 \( x^2 + 5x + 6 \)。
+
+所以，方程 \( x^2 + 5x + 6 = 0 \) 其实就等价于：
+\[
+(x+2)(x+3) = 0
+\]
+
+**我问你**：两个数（\( x+2 \) 和 \( x+3 \)）相乘等于0，那至少其中一个必须是多少？由此，你能求出 \( x \) 等于什么吗？
+
+---
+
+（等待学生回答：至少一个是0，所以 \( x+2=0 \) 或 \( x+3=0 \)，解得 \( x=-2 \) 或 \( x=-3 \)）
+
+太棒了！这就是因式分解法的核心：**把二次方程写成两个一次因式相乘等于0的形式，然后分别让每个因式等于0，就得到了两个解。**
+
+---
+
+**第三步：巩固与练习**
+
+现在，请试着用因式分解法解这个方程：
+\[
+x^2 - 5x + 6 = 0
+\]
+
+**提示**：想想哪两个数相加等于 -5，相乘等于 6？它们就是 \( (x \quad ?)(x \quad ?)=0 \) 里的问号。
+
+**最后，我想问你一个问题**：你之前学过用十字相乘法或提取公因式法来分解因式吗？如果学过，你觉得这两种方法里，哪一种更适合解一元二次方程？
+2026-05-28 15:31:13.094 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: system_base
+2026-05-28 15:31:13.094 | INFO     | src.core.prompt_loader:load_prompt:21 - Loaded prompt: evaluator
+2026-05-28 15:31:14.115 | INFO     | src.core.llm_client:chat:26 - LLM response: pass...
+2026-05-28 15:31:14.115 | INFO     | src.graph.education_graph:Evaluator:70 - [node4]处理中，评估结果为: pass
+2026-05-28 15:31:14.180 | INFO     | src.storage.event_store:append:39 - Event appended: TEACHING_INTERACTION for string
+2026-05-28 17:16:45.050 | INFO     | src.storage.event_store:close:25 - EventStore Closed PostgreSQL Connection
+2026-05-28 17:16:54.911 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis
+2026-05-28 17:17:54.428 | INFO     | src.core.learner_model:update_mastery:146 - [BKT] learner=%s, kp=%s, correct=%s, mastery: %.3f -> %.3f (%s)
+2026-05-28 17:17:54.513 | INFO     | src.storage.event_store:append:50 - Event appended: STUDENT_ANSWER for string
+2026-05-28 17:38:26.620 | INFO     | src.storage.event_store:close:30 - EventStore Closed PostgreSQL and Redis Connection
+2026-05-28 17:38:38.180 | INFO     | src.storage.event_store:connect:23 - EventStore Connected to PostgreSQL and Redis

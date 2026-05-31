@@ -5,20 +5,13 @@
 1. 确定学习顺序（拓扑排序）
 2. 检查前置知识是否达标
 3. 推荐下一个可学习的知识点
-
-面试要点：
-- DAG拓扑排序算法（Kahn's / DFS）
-- 前置知识检查的重要性
-- 知识图谱 vs 知识树：图更灵活，一个节点可有多个前置
 """
-
-import logging
+import yaml
+from loguru import logger
 from collections import deque
+from pathlib import Path
 
 from pydantic import BaseModel, Field
-
-logger = logging.getLogger(__name__)
-
 
 class KnowledgeNode(BaseModel):
     """知识点节点。"""
@@ -30,6 +23,11 @@ class KnowledgeNode(BaseModel):
     description: str = ""
     prerequisites: list[str] = Field(default_factory=list)  # 前置知识点ID列表
     tags: list[str] = Field(default_factory=list)
+    # 新增：GraphRAG使用
+    related_to: list[str] = Field(default_factory=list)  # 关联概念
+    common_errors: list[str] = Field(default_factory=list)  # 常见错误
+    teaching_analogies:list[str] = Field(default_factory=list)  # 教学类比
+    key_formulas:list[str] = Field(default_factory=list)  # 关键公式
 
 
 class KnowledgeGraph:
@@ -137,36 +135,21 @@ class KnowledgeGraph:
         full_order = self.topological_sort()
         return [nid for nid in full_order if nid in needed]
 
+    @classmethod
+    def from_yaml(cls, file_path: str) -> "KnowledgeGraph":
+        """从 YAML 文件加载知识图谱。"""
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = yaml.safe_load(f)
+        graph = cls()
+        for node_data in data["nodes"]:
+            graph.add_node(KnowledgeNode(**node_data))
+        logger.info(f"Knowledge graph loaded from {file_path}, {len(graph.nodes)} nodes")
+        return graph
 
-def build_sample_math_graph() -> KnowledgeGraph:
-    """构建示例数学知识图谱（初中数学部分知识点）。"""
-    graph = KnowledgeGraph()
 
-    nodes = [
-        KnowledgeNode(id="arithmetic", name="四则运算", difficulty=0.1, tags=["基础"]),
-        KnowledgeNode(id="fractions", name="分数运算", difficulty=0.2, prerequisites=["arithmetic"], tags=["基础"]),
-        KnowledgeNode(id="negative_numbers", name="负数", difficulty=0.15, prerequisites=["arithmetic"], tags=["基础"]),
-        KnowledgeNode(id="algebraic_expr", name="代数式", difficulty=0.3, prerequisites=["arithmetic", "negative_numbers"], tags=["代数"]),
-        KnowledgeNode(id="linear_eq_1", name="一元一次方程", difficulty=0.35, prerequisites=["algebraic_expr"], tags=["方程"]),
-        KnowledgeNode(id="linear_eq_2", name="二元一次方程组", difficulty=0.45, prerequisites=["linear_eq_1"], tags=["方程"]),
-        KnowledgeNode(id="factoring", name="因式分解", difficulty=0.4, prerequisites=["algebraic_expr"], tags=["代数"]),
-        KnowledgeNode(id="quadratic_eq", name="一元二次方程", difficulty=0.55, prerequisites=["factoring", "linear_eq_1"], tags=["方程"]),
-        KnowledgeNode(id="quadratic_func", name="二次函数", difficulty=0.6, prerequisites=["quadratic_eq"], tags=["函数"]),
-        KnowledgeNode(id="inequality", name="不等式", difficulty=0.4, prerequisites=["linear_eq_1"], tags=["不等式"]),
-        KnowledgeNode(id="coordinate", name="平面直角坐标系", difficulty=0.3, prerequisites=["negative_numbers"], tags=["几何"]),
-        KnowledgeNode(id="linear_func", name="一次函数", difficulty=0.45, prerequisites=["linear_eq_1", "coordinate"], tags=["函数"]),
-        KnowledgeNode(id="pythagorean", name="勾股定理", difficulty=0.35, prerequisites=["arithmetic"], tags=["几何"]),
-        KnowledgeNode(id="similar_triangle", name="相似三角形", difficulty=0.5, prerequisites=["pythagorean", "fractions"], tags=["几何"]),
-        KnowledgeNode(id="trig_basic", name="三角函数基础", difficulty=0.55, prerequisites=["pythagorean", "fractions"], tags=["三角"]),
-        KnowledgeNode(id="probability", name="概率初步", difficulty=0.4, prerequisites=["fractions"], tags=["统计"]),
-        KnowledgeNode(id="statistics", name="数据统计", difficulty=0.35, prerequisites=["arithmetic", "fractions"], tags=["统计"]),
-        KnowledgeNode(id="sequence", name="数列", difficulty=0.5, prerequisites=["algebraic_expr"], tags=["代数"]),
-        KnowledgeNode(id="sets", name="集合", difficulty=0.25, prerequisites=["arithmetic"], tags=["基础"]),
-        KnowledgeNode(id="logic", name="简易逻辑", difficulty=0.3, prerequisites=["sets"], tags=["基础"]),
-    ]
-
-    for node in nodes:
-        graph.add_node(node)
-
-    logger.info("Sample math knowledge graph built with %d nodes", len(nodes))
-    return graph
+if __name__ == "__main__":
+    data_path = Path(__file__).parent.parent / "data" / "math_graph.yaml"
+    graph = KnowledgeGraph.from_yaml(str(data_path))
+    print(f"节点数: {len(graph.nodes)}")
+    print(f"拓扑排序: {graph.topological_sort()}")
+    print(f"可学习节点(无前置): {graph.get_ready_nodes(set())}")
