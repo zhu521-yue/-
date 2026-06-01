@@ -24,8 +24,8 @@ jobs:
       - name: Install dependencies
         run: |
           cd enterprise
-          pip install -r requirements.txt
-          pip install pytest
+          pip install -r requirements.deploy.txt
+          pip install pytest pytest-asyncio
 
       - name: Run tests
         run: |
