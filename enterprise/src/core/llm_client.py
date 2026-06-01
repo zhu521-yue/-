@@ -1,5 +1,5 @@
 from openai import OpenAI
-from langfuse.decorators import observe
+# from langfuse.decorators import observe (v4 不兼容，部署时禁用)
 from dotenv import load_dotenv
 import os
 from loguru import logger
@@ -27,7 +27,7 @@ MODEL_CONFIG = {
     "gpt": {"client": gpt_client, "model": os.getenv("GPT_MODEL", "gpt-5.5")},
 }
 
-@observe(as_type="generation")
+# @observe(as_type="generation")
 def chat(system_prompt: str, user_message: str, model: str = "deepseek") -> str:
     """
     调用 LLM 生成回复。

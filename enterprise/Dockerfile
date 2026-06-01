@@ -2,10 +2,11 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
+# 换国内镜像源（清华）
+RUN sed -i 's|deb.debian.org|mirrors.tuna.tsinghua.edu.cn|g' /etc/apt/sources.list.d/debian.sources
+
 # 安装系统依赖
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends gcc && rm -rf /var/lib/apt/lists/*
 
 # 复制依赖文件（先复制依赖，利用 Docker 缓存）
 COPY requirements.deploy.txt ./requirements.txt
