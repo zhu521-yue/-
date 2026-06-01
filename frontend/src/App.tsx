@@ -125,15 +125,22 @@ export default function App() {
     if (!message.trim()) return
     updateActivity()
     setChatLoading(true)
+    setChatResponse('')
     try {
       const res = await fetch(`${API_BASE}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ learner_id: learnerId, message: message.trim(), ...getTimeData() }),
       })
+      if (!res.ok) {
+        setChatResponse('⚠️ 老师暂时忙不过来，请稍后再试~')
+        return
+      }
       const data = await res.json()
       setChatResponse(String(data.response?.response || ''))
       setMessage('')
+    } catch {
+      setChatResponse('⚠️ 网络出了点问题，请重试~')
     } finally { setChatLoading(false) }
   }
 
