@@ -28,6 +28,13 @@ jobs:
           pip install pytest pytest-asyncio
 
       - name: Run tests
+        env:
+          DEEPSEEK_API_KEY: sk-test-fake-key
+          DEEPSEEK_BASE_URL: https://api.deepseek.com
+          GPT_API_KEY: sk-test-fake-key
+          GPT_BASE_URL: https://localhost
+          DATABASE_URL: postgresql://test:test@localhost:5432/test
+          REDIS_URL: redis://localhost:6379/0
         run: |
           cd enterprise
           pytest tests/ -v
