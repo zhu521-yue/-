@@ -1,0 +1,44 @@
+# CI/CD 实现计划
+
+## 目标
+push 代码到 main 分支后：
+1. 自动跑 29 个单元测试（CI）
+2. 测试通过后自动部署到腾讯云服务器（CD）
+
+## 文件结构
+```
+.github/
+└── workflows/
+    └── deploy.yml    # GitHub Actions 工作流
+```
+
+## 工作流设计
+
+### 触发条件
+- push 到 main 分支
+- 只在 enterprise/ 或 frontend/ 目录有改动时触发
+
+### Job 1: test（CI）
+- 运行环境：ubuntu-latest + Python 3.11
+- 步骤：
+  1. checkout 代码
+  2. 安装依赖（requirements.txt）
+  3. 运行 pytest（enterprise/tests/）
+
+### Job 2: deploy（CD）
+- 依赖 test job 通过
+- 步骤：
+  1. SSH 到腾讯云服务器
+  2. cd /opt/multi-agent-education && git pull
+  3. docker compose up -d --build app
+  4. 健康检查
+
+## 需要配置的 GitHub Secrets
+- `SERVER_HOST`: 122.51.6.139
+- `SERVER_USER`: root
+- `SERVER_SSH_KEY`: 服务器的 SSH 私钥
+
+## 注意事项
+- 测试不需要数据库连接（mock 了外部依赖）
+- 部署用 appleboy/ssh-action 这个成熟的 GitHub Action
+- 健康检查确保部署成功

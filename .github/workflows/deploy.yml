@@ -1,0 +1,54 @@
+name: CI/CD - 测试 & 部署
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'enterprise/**'
+      - 'frontend/**'
+      - '.github/workflows/**'
+
+jobs:
+  test:
+    name: 🧪 运行测试
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          cd enterprise
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run tests
+        run: |
+          cd enterprise
+          pytest tests/ -v
+
+  deploy:
+    name: 🚀 部署到服务器
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /opt/multi-agent-education
+            git pull origin main
+            docker compose -f enterprise/docker-compose.yml up -d --build app
+            sleep 5
+            curl -f http://localhost:8000/health || exit 1
+            echo "✅ 部署成功"
