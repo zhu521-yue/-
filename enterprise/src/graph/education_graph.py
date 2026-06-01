@@ -63,7 +63,7 @@ def Planner(state:GraphState):
     planner_prompt = load_prompt("planner")
     system_prompt = planner_prompt["instruction"]
     user_message = f"学生的问题：{state['message']}\n学生当前水平：{state['mastery_level']}\n掌握度：{state['mastery']:.0%}"  
-    plan = chat(system_prompt,user_message,model="gpt").strip()
+    plan = chat(system_prompt,user_message,model="deepseek").strip()
     retry_count = state.get("retry_count",0)+1    
     logger.info(f"[node2]处理中，计划为: {plan}")
     logger.info(f"[node2]重试次数为: {retry_count}")

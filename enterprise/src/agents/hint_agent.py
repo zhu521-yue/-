@@ -49,7 +49,7 @@ class HintAgent(BaseWorker):
             f"\n请根据提示级别生成对应的提示内容。"
         )
 
-        response = chat(system_prompt, user_message,model="gpt").strip()
+        response = chat(system_prompt, user_message,model="deepseek").strip()
         logger.info(f"[HintAgent] 生成 Level {hint_level} 提示")
 
         return {

@@ -36,7 +36,7 @@ class TutorAgent(BaseWorker):
         )
 
         # 调用LLM
-        response = chat(system_prompt,user_message,model="gpt").strip()
+        response = chat(system_prompt,user_message,model="deepseek").strip()
         logger.info(f"[TutorAgent] 生成教学内容完成")
         return {
             "response":response,
